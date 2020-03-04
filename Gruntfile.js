@@ -13,12 +13,14 @@ module.exports = function (grunt) {
       options: {
         processors: [
           require("autoprefixer")({
-            browsers: [
+            overrideBrowserslist: [
               "last 1 version",
               "last 2 Chrome versions",
               "last 2 Firefox versions",
               "last 2 Opera versions",
-              "last 2 Edge versions"
+              "last 2 Edge versions",
+              'IE 11',
+              'IE 6','Chrome 9', 'Firefox 14'
             ]
           }),
           require("css-mqpacker")({

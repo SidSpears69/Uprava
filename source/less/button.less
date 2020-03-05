@@ -1,46 +1,30 @@
-// .button {
-//     margin-top: 20px;
-//     border-radius: 2px;
-//     cursor: pointer;
-//     display: inline-block;
-//     font: inherit;
-//     padding-bottom: 16px;
-//     padding-top: 18px;
-//     text-align: center;
-//     text-decoration: none;
-//     text-transform: uppercase;
-//     vertical-align: middle;
-//     word-wrap: break-word;
-//     width: 100%;
-//     font-size: 20px;
-//     font-weight: bold;
-//     outline: none;
-//     border: 0;
-//     &--emotions {
-//         width: 88%;
-//     }
-//     &:hover {
-//         background-color: #669ec0;
-//     }
-//     &:active {
-//         background-color: #5496bd;
-//         color: rgba(255, 255, 255, 0.3)
-//     }
-// }
-
-// @media @tablet-widths {
-//     .button {
-//         margin-top: 27px;
-//         &--emotions {
-//             width: 50%;
-//         }
-//     }
-// }
-// @media @desktop-widths {
-//     .button {
-//         margin-top: 28px;
-//     }
-//     .button--hotel {
-//         margin-top: 35px;
-//     }
-// }
+.button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-family: 'FuturaPT';
+    letter-spacing: 0.03em;
+    color: @white;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1px;
+    &--new-payment {
+        border-radius: 1.1em;
+        box-shadow: 0 0 0.3em 0 rgba(47, 47, 47, 0.1);
+        background-color: @reddish;
+        padding: 0.5em 1.1em;
+        position: absolute;
+        top: 0;
+        right: 1.4em;
+        transform: translateY(-50%);
+       img {
+           margin-left: 0.6em;
+       }
+    }
+    &--payment {
+        width: 20px;
+        font-size: 0;
+        margin-right: 85px;
+    }
+}

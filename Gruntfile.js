@@ -42,17 +42,17 @@ module.exports = function (grunt) {
       style: {
         files: ["source/less/**/*.less"],
         tasks: ["less", "postcss", "csso"]
-      }
+      },
     },
     browserSync: {
       server: {
         bsFiles: {
-          src: ["build/*.html",
-            "build/css/*.css"
+          src: ["source/*.html",
+            "source/css/*.css"
           ]
         },
         options: {
-          server: "build",
+          server: "source",
           watchTask: true
         }
       }

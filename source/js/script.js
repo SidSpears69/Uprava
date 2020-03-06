@@ -7,8 +7,12 @@ $(document).ready(function(){
             $(".popup").addClass("opened");
             var top = $(this).offset().top;
             var width = $(".popup__content").outerWidth();
-            var widthButton = $(this).outerWidth()
+            var widthButton = $(this).outerWidth();
             var left = $(this).offset().left - width + widthButton;
+            var difference = top + $(".popup__content").outerHeight() + $("footer").outerHeight() - $(document).height();
+            if(difference > 0) {
+                top = top - difference;
+            }
             $(".popup__content").offset({top:top, left:left});
         })
     })

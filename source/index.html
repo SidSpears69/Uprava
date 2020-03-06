@@ -41,96 +41,119 @@
                         <button type="submit" class="button search__button"><img src="img/icons/search.svg" alt="">
                             Искать</button>
                     </form>
-                    <button class="button button--new-payment">Создать новый платёж<img src="img/icons/add.svg"
-                            alt=""></button>
+                    <a href="" class="menu-payment__new-payment">Создать новый платёж<img src="img/icons/add.svg"
+                            alt=""></a>
                 </div>
         </div>
     </header>
     <aside class="menu">
+        <div class="overlay"></div>
         <nav class="menu__wrapper">
-            <button class="button menu__toggle"><img src="img/icons/burger.svg" alt="">Открыть меню</button>
+            <button class="button button--menu"><img class="menu__img" src="img/icons/burger.svg" alt="">Открыть меню</button>
             <ul class="menu__top">
-                <li class="menu__item"><a href="#"><img src="img/icons/extract.svg" alt="Выписка">Выписка</a>
+                <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/extract.svg" alt="Выписка">Выписка</a>
                 </li>
-                <li class="menu__item"><a href="#"><img src="img/icons/newpayment.svg" alt="Новый платеж">Новый
+                <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/newpayment.svg" alt="Новый платеж">Новый
                         платеж</a></li>
-                <li class="menu__item"><a href="#"><img src="img/icons/cabinet-blue.svg" alt="Личный кабинет">Личный
+                <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/cabinet-blue.svg" alt="Личный кабинет">Личный
                         кабинет</a></li>
-                <li class="menu__item"><a href="#"><img src="img/icons/tariffs.svg" alt="Тарифы">Тарифы</a></li>
-                <li class="menu__item"><a href="#"><img src="img/icons/api.svg" alt="API">API</a></li>
+                <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/tariffs.svg" alt="Тарифы">Тарифы</a></li>
+                <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/api.svg" alt="API">API</a></li>
             </ul>
+            <p class="menu__text">Телефон горячей линии: 
+                <a class="menu__link" href="tel:88008000000">8 (800) 800-00-00</a>
+                <a class="menu__link menu__link--underline" href="#">Чат поддержки клиентов</a>
+            </p>
+            <p class="menu__text menu__text--address">Адрес головного офиса Эскроу Банка в России:</p>
+            <p class="menu__text">г.Москва, ул. Звенигородская 25</p>
             <ul class="menu__bottom">
-                <li class="menu__item"><a href="#"><img src="img/icons/questions.svg"
+                <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/questions.svg"
                             alt="Вопрос-ответ">Вопрос-ответ</a></li>
-                <li class="menu__item"><a href="#"><img src="img/icons/logout-menu.svg" alt="Выйти">Выйти</a></li>
+                <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/logout-menu.svg" alt="Выйти">Выйти</a></li>
             </ul>
         </nav>
     </aside>
     <main class="page-main">
-        <ul class="wrapper payment">
-            <li class="payment__item payment__item--incoming payment__item--blocked">
-                <div class="payment__section payment__section--left">
-                    <span class="payment__date">01.01.2019</span>
-                    <div class="payment__info">
-                        <p>Плательщик: ООО «Управа»</p>
-                        <p>01.01.2019г. – срок хранения денег</p>
-                        <p>Статус платежа: ожидает подтверждения</p>
+        <div class="wrapper wrapper--payment">
+            <ul class="payment">
+                <li class="payment__item payment__item--incoming payment__item--blocked">
+                    <div class="payment__section payment__section--left">
+                        <span class="payment__date">01.01.2019</span>
+                        <div class="payment__info">
+                            <p>Плательщик: ООО «Управа»</p>
+                            <p>01.01.2019г. – срок хранения денег</p>
+                            <p>Статус платежа: ожидает подтверждения</p>
+                        </div>
                     </div>
-                </div>
-                <div class="payment__section payment__section--right">
-                    <button class="button button--payment"><img src="img/icons/burger.svg" alt=""></button>
-                    <span class="sum">+120 000 ₽</span>
-                </div>
-            </li>
-            <li class="payment__item payment__item--outgoing payment__item--blocked">
-                <div class="payment__section payment__section--left">
-                    <span class="payment__date">01.01.2019</span>
-                    <div class="payment__info">
-                        <p>Получатель: ООО «Управа»</p>
-                        <p>Нейтральный Счет ЭскроуБанк (счет временного хранения денег: 0000000001)
-                        </p>
-                        <p>01.01.2019г. – срок хранения денег</p>
-                        <p>Статус платежа: ожидает подтверждения</p>
+                    <div class="payment__section payment__section--right">
+                        <button class="button button--payment"><img src="img/icons/burger.svg" alt="">Открыть меню</button>
+                        <span class="sum sum--payment">+120 000 ₽</span>
                     </div>
-                </div>
-                <div class="payment__section payment__section--right">
-                    <button class="button button--payment"><img src="img/icons/burger.svg" alt=""></button>
-                    <span class="sum">-21 000 ₽</span>
-                </div>
-            </li>
-            <li class="payment__item payment__item--incoming payment__item--confirmed">
-                <div class="payment__section payment__section--left">
-                    <span class="payment__date">01.01.2019</span>
-                    <div class="payment__info">
-                        <p>Плательщик: ООО «Управа»</p>
-                        <p>Нейтральный Счет ЭскроуБанк (счет временного хранения денег: 0000000001)
-                        </p>
-                        <p>01.01.2019г. – срок хранения денег</p>
-                        <p>Статус платежа: ожидает подтверждения</p>
+                </li>
+                <li class="payment__item payment__item--outgoing payment__item--blocked">
+                    <div class="payment__section payment__section--left">
+                        <span class="payment__date">01.01.2019</span>
+                        <div class="payment__info">
+                            <p>Получатель: ООО «Управа»</p>
+                            <p>Нейтральный Счет ЭскроуБанк (счет временного хранения денег: 0000000001)
+                            </p>
+                            <p>01.01.2019г. – срок хранения денег</p>
+                            <p>Статус платежа: ожидает подтверждения</p>
+                        </div>
                     </div>
-                </div>
-                <div class="payment__section payment__section--right">
-                    <button class="button button--payment"><img src="img/icons/burger.svg" alt=""></button>
-                    <span class="sum">+120 000 ₽</span>
-                </div>
-            </li>
-            <li class="payment__item payment__item--outgoing payment__item--confirmed">
-                <div class="payment__section payment__section--left">
-                    <span class="payment__date">01.01.2019</span>
-                    <div class="payment__info">
-                        <p>Получатель: ООО «Управа»</p>
-                        <p>Нейтральный Счет ЭскроуБанк (счет временного хранения денег: 0000000001)
-                        </p>
-                        <p>01.01.2019г. – срок хранения денег</p>
-                        <p>Статус платежа: ожидает подтверждения</p>
+                    <div class="payment__section payment__section--right">
+                        <button class="button button--payment"><img src="img/icons/burger.svg" alt=""></button>
+                        <span class="sum sum--payment">-21 000 ₽</span>
                     </div>
+                </li>
+                <li class="payment__item payment__item--incoming payment__item--confirmed">
+                    <div class="payment__section payment__section--left">
+                        <span class="payment__date">01.01.2019</span>
+                        <div class="payment__info">
+                            <p>Плательщик: ООО «Управа»</p>
+                            <p>Нейтральный Счет ЭскроуБанк (счет временного хранения денег: 0000000001)
+                            </p>
+                            <p>01.01.2019г. – срок хранения денег</p>
+                            <p>Статус платежа: ожидает подтверждения</p>
+                        </div>
+                    </div>
+                    <div class="payment__section payment__section--right">
+                        <button class="button button--payment"><img src="img/icons/burger.svg" alt=""></button>
+                        <span class="sum sum--payment">+120 000 ₽</span>
+                    </div>
+                </li>
+                <li class="payment__item payment__item--outgoing payment__item--confirmed">
+                    <div class="payment__section payment__section--left">
+                        <span class="payment__date">01.01.2019</span>
+                        <div class="payment__info">
+                            <p>Получатель: ООО «Управа»</p>
+                            <p>Нейтральный Счет ЭскроуБанк (счет временного хранения денег: 0000000001)
+                            </p>
+                            <p>01.01.2019г. – срок хранения денег</p>
+                            <p>Статус платежа: ожидает подтверждения</p>
+                        </div>
+                    </div>
+                    <div class="payment__section payment__section--right">
+                        <button class="button button--payment"><img src="img/icons/burger.svg" alt="">Открыть меню</button>
+                        <span class="sum sum--payment">+120 000 ₽</span>
+                    </div>
+                </li>
+            </ul>
+            <div class="popup">
+                <div class="overlay"></div>
+                <div class="popup__content">
+                    <button class="button button--close"><img src="img/icons/close.svg" alt=""> Закрыть окно</button>
+                    <nav class="menu-payment menu-payment--popup">
+                        <a class="menu-payment__item" href="#">Подтвердить</a>
+                        <a class="menu-payment__item" href="#">Отменить</a>
+                        <a class="menu-payment__item" href="#">Пополнить</a>
+                        <a class="menu-payment__item" href="#">Открыть спор</a>
+                        <a class="menu-payment__item" href="#">Получить деньги</a>
+                    </nav>
+                    <a class="menu-payment__item menu-payment__item--download" href="#">Скачать договор-счет ЭскроуБанка</a>
                 </div>
-                <div class="payment__section payment__section--right">
-                    <button class="button button--payment"><img src="img/icons/burger.svg" alt="">Открыть меню</button>
-                    <span class="sum">+120 000 ₽</span>
-                </div>
-            </li>
-        </ul>
+            </div>
+        </div>
     </main>
     <footer class="copyright">© ЭСКРОУ-УПРАВА. Система безопасных платежей. Все права
         защищены.</footer>

@@ -1,14 +1,38 @@
 .menu-payment {
     width: 50%;
     justify-content: space-between;
+    &--popup {
+        margin: 32px 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
 }
 .menu-payment__item {
     letter-spacing: 0.03em;
-    color: @marine;
     margin-right: 6%;
     &--active {
         font-family: 'FuturaPT-Demi';
         font-weight: normal;
         text-decoration: 2px underline;
     }
+    &--download {
+        font-size: 0.9em;
+        letter-spacing: 0.02em;
+        text-decoration: underline;
+    }
+}
+.menu-payment__new-payment {
+        border-radius: 1.1em;
+        box-shadow: 0 0 0.3em 0 rgba(47, 47, 47, 0.1);
+        background-color: @reddish;
+        padding: 0.5em 1.1em;
+        position: absolute;
+        top: 0;
+        right: 1.4em;
+        transform: translateY(-50%);
+        color: @white;
+       img {
+           margin-left: 0.6em;
+       }
 }

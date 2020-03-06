@@ -34,6 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    letter-spacing: 0.03em;
 }
 img {
     max-width: 100%;
@@ -49,8 +50,11 @@ ul {
 
 a {
     text-decoration: none;
+    color: @marine;
 }
-
+p {
+    margin: 0;
+}
 input, textarea {
     outline: none;
 }
@@ -60,23 +64,42 @@ figure {
 .wrapper {
     width:90%;
     margin: 0 auto;
+    &--payment {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
 }
 .sum {
-    font-size: 26px;
-    letter-spacing: 0.65px;
+    font-size: 1.4em;
+    letter-spacing: 0.04em;
     display: block;
     line-height: 1;
+    &--payment {
+        margin-left: 29%;
+    }
 }
 .page-main {
-    padding-left: 84px;
+    padding-left: 4.7rem;
+    flex-grow: 1;
+    display: flex;
 }
 .copyright {
-    padding: 5px 0 5px 84px;
-    font-size: 14px;
+    padding: 0.3em 0 0.3em 4.7rem;
+    font-size: 0.8em;
     font-weight: 500;
-    letter-spacing: 0.35px;
+    letter-spacing: 0.02em;
     color: @steel-grey;
     width:90%;
     margin: 0 auto;
     margin-top: auto;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: @marine;
+    opacity: 0.9;
 }

@@ -30,7 +30,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
 }
 ul {
   list-style: none;
@@ -66,23 +65,30 @@ figure {
   display: block;
   line-height: 1;
 }
-.sum--payment {
-  margin-left: 29%;
-}
 .page-main {
   padding-left: 4.7rem;
   flex-grow: 1;
   display: flex;
+  margin-top: 224px;
+  margin-bottom: 26px;
 }
 .copyright {
-  padding: 0.3em 0 0.3em 4.7rem;
+  padding-left: 4.7rem;
   font-size: 0.8em;
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #848a8f;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  background-color: #f7f8fa;
+}
+.copyright .wrapper {
+  padding: 0.3em 0;
+  box-shadow: -1px -5px 3px -5px rgba(47, 47, 47, 0.1);
 }
 .overlay {
   position: absolute;
@@ -92,6 +98,9 @@ figure {
   left: 0;
   background-color: #062a48;
   opacity: 0.9;
+}
+.scroll-disabled {
+  overflow: hidden;
 }
 .button {
   cursor: pointer;
@@ -121,6 +130,9 @@ figure {
   background-color: #062a48;
   padding-top: 2.2em;
   padding-left: 4.7rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 .page-header__container {
   display: flex;
@@ -180,6 +192,8 @@ figure {
 .menu-payment {
   width: 50%;
   justify-content: space-between;
+  display: flex;
+  margin-right: 4%;
 }
 .menu-payment--popup {
   margin: 32px 0;
@@ -189,7 +203,6 @@ figure {
 }
 .menu-payment__item {
   letter-spacing: 0.03em;
-  margin-right: 6%;
 }
 .menu-payment__item--active {
   font-family: 'FuturaPT-Demi';
@@ -208,7 +221,7 @@ figure {
   padding: 0.5em 1.1em;
   position: absolute;
   top: 0;
-  right: 1.4em;
+  right: 2%;
   transform: translateY(-50%);
   color: #ffffff;
 }
@@ -253,7 +266,7 @@ figure {
   text-decoration: 2px underline;
 }
 .menu__wrapper {
-  padding: 1.3rem 1.1rem;
+  padding: 3vh 1.1rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -261,9 +274,14 @@ figure {
   position: relative;
   width: 15rem;
   text-align: left;
+  overflow: auto;
 }
 .menu__item {
-  margin-bottom: 1.7rem;
+  margin-bottom: 3.8vh;
+}
+.menu__item a {
+  display: flex;
+  align-items: center;
 }
 .menu__bottom {
   margin-top: auto;
@@ -272,18 +290,19 @@ figure {
   margin-right: 1.3rem;
 }
 .menu__top {
-  margin-top: 2.9rem;
-  margin-bottom: 0.7rem;
+  margin-top: 6.8vh;
+  margin-bottom: 1.5vh;
 }
 .menu__text {
   color: #062a48;
-  margin-bottom: 2.2em;
+  margin-bottom: 3.8vh;
 }
 .menu__text--address {
-  margin-bottom: 0.7em;
+  margin-bottom: 1.5vh;
 }
 .menu__link {
   display: block;
+  margin: 1.5vh 0;
 }
 .payment {
   box-shadow: -1px 0px 3px 0 rgba(47, 47, 47, 0.1);
@@ -315,6 +334,7 @@ figure {
   width: 23%;
   padding-right: 1.5em;
   padding-bottom: 1.5em;
+  justify-content: space-between;
 }
 .payment__section--right::after {
   content: '';

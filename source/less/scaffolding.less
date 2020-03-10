@@ -39,7 +39,6 @@ body {
 img {
     max-width: 100%;
     height: auto;
-    vertical-align: middle;
 }
 
 ul {
@@ -75,24 +74,31 @@ figure {
     letter-spacing: 0.04em;
     display: block;
     line-height: 1;
-    &--payment {
-        margin-left: 29%;
-    }
 }
 .page-main {
     padding-left: 4.7rem;
     flex-grow: 1;
     display: flex;
+    margin-top: 224px;
+    margin-bottom: 26px;
 }
 .copyright {
-    padding: 0.3em 0 0.3em 4.7rem;
+    padding-left: 4.7rem;
     font-size: 0.8em;
     font-weight: 500;
     letter-spacing: 0.02em;
     color: @steel-grey;
-    width:90%;
+    width:100%;
     margin: 0 auto;
     margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    background-color: @pale-grey;
+    & .wrapper {
+        padding: 0.3em 0;
+        box-shadow: -1px -5px 3px -5px rgba(47, 47, 47, 0.1);
+    }
 }
 .overlay {
     position: absolute;
@@ -102,4 +108,7 @@ figure {
     left: 0;
     background-color: @marine;
     opacity: 0.9;
+}
+.scroll-disabled {
+    overflow: hidden;
 }

@@ -10,7 +10,7 @@ $(document).ready(function () {
             var width = $(".popup__content").outerWidth();
             var widthButton = $(this).outerWidth();
             var left = $(this).offset().left - width + widthButton;
-            var difference = top + $(".popup__content").outerHeight() + $("footer").outerHeight() - $(document).height();
+            var difference = top + $(".popup__content").outerHeight() + $("footer").outerHeight() - window.innerHeight;
             if (difference > 0) {
                 top = top - difference;
             }
@@ -20,6 +20,4 @@ $(document).ready(function () {
     $(".button--close").click(function () {
         $(".popup").removeClass("opened");
     })
-    $(".menu").theiaStickySidebar({
-    });
 })

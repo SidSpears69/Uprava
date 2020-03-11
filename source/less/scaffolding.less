@@ -19,9 +19,11 @@
     font-weight: 500;
     font-style: normal;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'FuturaPT';
     font-size: 18px;
@@ -36,6 +38,7 @@ body {
     min-height: 100vh;
     letter-spacing: 0.03em;
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -51,55 +54,66 @@ a {
     text-decoration: none;
     color: @marine;
 }
+
 p {
     margin: 0;
 }
-input, textarea {
+
+input,
+textarea {
     outline: none;
 }
+
 figure {
     margin: 0;
 }
+
 .wrapper {
-    width:90%;
+    width: 90%;
     margin: 0 auto;
+
     &--payment {
         display: flex;
         flex-direction: column;
         position: relative;
     }
 }
+
 .sum {
     font-size: 1.4em;
     letter-spacing: 0.04em;
     display: block;
     line-height: 1;
 }
+
 .page-main {
     padding-left: 4.7rem;
     flex-grow: 1;
     display: flex;
-    margin-top: 224px;
-    margin-bottom: 26px;
+    margin-top: 12.4em;
+    margin-bottom: 1.4em;
 }
+
 .copyright {
     padding-left: 4.7rem;
     font-size: 0.8em;
     font-weight: 500;
     letter-spacing: 0.02em;
     color: @steel-grey;
-    width:100%;
+    width: 100%;
     margin: 0 auto;
     margin-top: auto;
     position: fixed;
     bottom: 0;
     z-index: 100;
     background-color: @pale-grey;
+
     & .wrapper {
         padding: 0.3em 0;
         box-shadow: -1px -5px 3px -5px rgba(47, 47, 47, 0.1);
     }
 }
+
 .overlay {
     position: absolute;
     width: 100%;
@@ -109,6 +123,24 @@ figure {
     background-color: @marine;
     opacity: 0.9;
 }
+
 .scroll-disabled {
     overflow: hidden;
+}
+
+@media (max-height: 820px) {
+    body {
+        font-size: calc(8px + 1.2vh);
+    }
+}
+
+@media (max-height: 499px) {
+    body {
+        font-size: 14px;
+    }
+}
+@media @large-widths {
+    body {
+        font-size: 14px;
+    }
 }

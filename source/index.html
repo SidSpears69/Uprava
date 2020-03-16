@@ -12,7 +12,7 @@
 <body>
     <header class="page-header">
         <div class="wrapper">
-            <div class="page-header__container">
+            <div class="page-header__container page-header__container--top">
                 <a class="page-header__logo" href="#">
                     <figure class="logo">
                         <img src="img/logo.png" alt="logo" class="logo__img/icons">
@@ -22,12 +22,45 @@
                         </figcaption>
                     </figure>
                 </a>
-                <p class="page-header__info">Доступно к снятию: <span class="sum">20 000 ₽</span></p>
-                <nav class="page-header__menu">
-                    <a href="#" class="page-header__link"><img src="img/icons/share.svg" alt="Поделиться"></a>
-                    <a href="#" class="page-header__link"><img src="img/icons/cabinet.svg" alt="Кабинет"></a>
-                    <a href="#" class="page-header__link"><img src="img/icons/logout.svg" alt="Выйти"></a>
-                </nav>
+                <div class="page-header__content">
+                    <p class="page-header__info">Доступно к снятию: <span class="sum">20 000 ₽</span></p>
+                    <nav class="page-header__menu">
+                        <a href="#" class="page-header__link"><img src="img/icons/share.svg" alt="Поделиться"></a>
+                        <a href="#" class="page-header__link"><img src="img/icons/cabinet.svg" alt="Кабинет"></a>
+                        <a href="#" class="page-header__link"><img src="img/icons/logout.svg" alt="Выйти"></a>
+                    </nav>
+                </div>
+                <aside class="menu">
+                    <button class="button menu__toggle"><svg fill="#062a48" width="28" height="28" version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#062a48" stroke-miterlimit="10" stroke-width="2" d="M2 12h20M2 6h20M2 18h20"/></svg></button>
+                    <div class="overlay"></div>
+                    <nav class="menu__nav">
+                        <div class="menu__wrapper">
+                            <div class="menu__content">
+                                <ul class="menu__top">
+                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/extract.svg" alt="Выписка"><span>Выписка</span></a>
+                                    </li>
+                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/newpayment.svg" alt="Новый платеж"><span>Новый
+                                        платеж</span></a></li>
+                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/cabinet-blue.svg" alt="Личный кабинет"><span>Личный
+                                        кабинет</span></a></li>
+                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/tariffs.svg" alt="Тарифы"><span>Тарифы</span></a></li>
+                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/api.svg" alt="API"><span>API</span></a></li>
+                                </ul>
+                                <p class="menu__text">Телефон горячей линии: 
+                                    <a class="menu__link" href="tel:88008000000">8 (800) 800-00-00</a>
+                                    <a class="menu__link menu__link--underline" href="#">Чат поддержки клиентов</a>
+                                </p>
+                                <p class="menu__text menu__text--address">Адрес головного офиса Эскроу Банка в России:</p>
+                                <p class="menu__text">г.Москва, ул. Звенигородская 25</p>
+                                <ul class="menu__bottom">
+                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/questions.svg"
+                                                alt="Вопрос-ответ"><span>Вопрос-ответ</span></a></li>
+                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/logout-menu.svg" alt="Выйти"><span>Выйти</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </aside>
             </div>
             <div class="page-header__container page-header__container--menu">
                     <nav class="menu-payment">
@@ -47,35 +80,6 @@
                 </div>
         </div>
     </header>
-    <aside class="menu">
-        <div class="overlay"></div>
-        <nav class="menu__nav">
-            <div class="menu__wrapper">
-                <button class="button button--menu"><img class="menu__img" src="img/icons/burger.svg" alt=""></button>
-                <ul class="menu__top">
-                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/extract.svg" alt="Выписка"><span>Выписка</span></a>
-                    </li>
-                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/newpayment.svg" alt="Новый платеж"><span>Новый
-                        платеж</span></a></li>
-                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/cabinet-blue.svg" alt="Личный кабинет"><span>Личный
-                        кабинет</span></a></li>
-                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/tariffs.svg" alt="Тарифы"><span>Тарифы</span></a></li>
-                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/api.svg" alt="API"><span>API</span></a></li>
-                </ul>
-                <p class="menu__text">Телефон горячей линии: 
-                    <a class="menu__link" href="tel:88008000000">8 (800) 800-00-00</a>
-                    <a class="menu__link menu__link--underline" href="#">Чат поддержки клиентов</a>
-                </p>
-                <p class="menu__text menu__text--address">Адрес головного офиса Эскроу Банка в России:</p>
-                <p class="menu__text">г.Москва, ул. Звенигородская 25</p>
-                <ul class="menu__bottom">
-                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/questions.svg"
-                                alt="Вопрос-ответ"><span>Вопрос-ответ</span></a></li>
-                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/logout-menu.svg" alt="Выйти"><span>Выйти</span></a></li>
-                </ul>
-            </div>
-        </nav>
-    </aside>
     <main class="page-main">
         <div class="wrapper wrapper--payment">
             <ul class="payment">

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".button--menu").click(function () {
+    $(".menu__toggle").click(function () {
         $(".menu").toggleClass("opened");
         $("body").toggleClass("scroll-disabled");
     });

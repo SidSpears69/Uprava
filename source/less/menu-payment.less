@@ -15,7 +15,7 @@
     &--active {
         font-family: 'FuturaPT-Demi';
         font-weight: normal;
-        text-decoration: 2px underline;
+        border-bottom: 2px solid #062a48;
     }
     &--download {
         font-size: 0.9em;
@@ -38,4 +38,28 @@
            vertical-align: bottom;
            width: 1.1em;
        }
+}
+@media @medium-widths {
+    .menu-payment {
+        width: 60%;
+    }
+}
+@media @small-widths {
+    .menu-payment {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.7em;
+    }
+    .menu-payment__item {
+        margin-bottom: 0.7em;
+    }
+}
+@media @extra-small-widths {
+    .menu-payment {
+       justify-content: flex-start;
+       flex-wrap: wrap;
+    }
+    .menu-payment__item {
+        margin-right: 1.2em;
+    }
 }

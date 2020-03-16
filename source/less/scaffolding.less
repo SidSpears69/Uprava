@@ -87,7 +87,7 @@ figure {
 }
 
 .page-main {
-    padding-left: 4.7rem;
+    padding-left: 4.2em;
     flex-grow: 1;
     display: flex;
     margin-top: 12.4em;
@@ -95,7 +95,7 @@ figure {
 }
 
 .copyright {
-    padding-left: 4.7rem;
+    padding-left: 5.25em;
     font-size: 0.8em;
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -115,7 +115,7 @@ figure {
 }
 
 .overlay {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
@@ -130,7 +130,7 @@ figure {
 
 @media (max-height: 820px) {
     body {
-        font-size: calc(8px + 1.2vh);
+        font-size: calc(8.5px + 1.1vh);
     }
 }
 
@@ -142,5 +142,28 @@ figure {
 @media @large-widths {
     body {
         font-size: 14px;
+    }
+}
+@media @medium-widths {
+    .wrapper {
+        width: 95%;
+    }
+}
+@media @small-widths {
+    .page-main {
+        margin-top: 15.95em;
+        padding-left: 0;
+    }
+    .copyright {
+        padding-left: 0;
+    }
+}
+@media @extra-small-widths {
+    .page-main {
+        margin-top: 21.483em;
+        margin-bottom: 1.145em;
+    }
+    .copyright {
+        font-size: 0.6em;
     }
 }

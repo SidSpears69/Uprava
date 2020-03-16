@@ -13,8 +13,8 @@
         margin-bottom: 1.5em;
         &::before {
             content: '';
-            width: 2.2em;
-            height: 2.2em;
+            width: 36px;
+            height: 36px;
             display: block;
             position: absolute;
             left: 0;
@@ -81,4 +81,29 @@
 }
 .payment__info p {
     margin: 0;
+}
+@media @small-widths {
+    .payment__section--left {
+        padding-left: 2.5em;
+        width: 78%;
+    }
+    .payment__section--right {
+        width: 30%;
+    }
+    .payment__date {
+        margin-right: 1.5em;
+    }
+}
+@media @extra-small-widths {
+    .payment__item {
+        flex-wrap: wrap;
+    }
+    .payment__section--left,
+    .payment__section--right {
+        width: 100%;
+    }
+    .payment__section--left::before {
+        width: 30px;
+        height: 30px;
+    }
 }

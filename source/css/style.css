@@ -520,7 +520,7 @@ figure {
     margin-top: 16.769em;
     margin-bottom: 1.145em;
   }
-  --payment {
+  .page-main--payment {
     margin-top: 21.483em;
   }
 }

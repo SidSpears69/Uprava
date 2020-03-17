@@ -3,6 +3,10 @@ $(document).ready(function () {
         $(".menu").toggleClass("opened");
         $("body").toggleClass("scroll-disabled");
     });
+    $(".menu__opened").click(function () {
+        $(".menu").toggleClass("opened");
+        $("body").toggleClass("scroll-disabled");
+    });
     $(".button--payment").each(function () {
         $(this).click(function () {
             $(".popup").addClass("opened");

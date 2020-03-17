@@ -9,12 +9,13 @@
     position: relative;
     &--left {
         padding-left: 5.6em;
-        width: 77%;
+        width: 76%;
         margin-bottom: 1.5em;
+        margin-right: 1%;
         &::before {
             content: '';
-            width: 36px;
-            height: 36px;
+            width: 2.2em;
+            height: 2.2em;
             display: block;
             position: absolute;
             left: 0;
@@ -85,10 +86,10 @@
 @media @small-widths {
     .payment__section--left {
         padding-left: 2.5em;
-        width: 78%;
+        width: 66%;
     }
     .payment__section--right {
-        width: 30%;
+        width: 32%;
     }
     .payment__date {
         margin-right: 1.5em;
@@ -101,9 +102,5 @@
     .payment__section--left,
     .payment__section--right {
         width: 100%;
-    }
-    .payment__section--left::before {
-        width: 30px;
-        height: 30px;
     }
 }

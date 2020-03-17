@@ -90,15 +90,6 @@ figure {
   padding: 0.3em 0;
   box-shadow: -1px -5px 3px -5px rgba(47, 47, 47, 0.1);
 }
-.overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #062a48;
-  opacity: 0.9;
-}
 .scroll-disabled {
   overflow: hidden;
 }
@@ -153,6 +144,7 @@ figure {
 }
 .button--payment {
   width: 1.1rem;
+  margin-right: 0.5rem;
 }
 .button--close {
   margin-left: auto;
@@ -220,9 +212,8 @@ figure {
   .page-header {
     padding-left: 0;
   }
-  .page-header__container--top {
-    position: relative;
-    padding-right: 2.9em;
+  .page-header__content {
+    margin-right: 1.1em;
   }
 }
 @media (max-width: 575px) {
@@ -234,11 +225,14 @@ figure {
     min-height: 10.6em;
   }
   .page-header__content {
-    padding-right: 0;
     margin-top: 1.1em;
   }
   .page-header__info {
     padding-left: 1.4em;
+  }
+  .page-header__content {
+    margin-right: 0;
+    order: 1;
   }
 }
 .logo {
@@ -364,6 +358,7 @@ figure {
   box-shadow: -1px 0px 3px 0 rgba(47, 47, 47, 0.1);
   overflow: hidden;
   left: 0;
+  background-color: rgba(6, 42, 72, 0.9);
 }
 .menu .menu__item span,
 .menu .menu__text {
@@ -382,9 +377,6 @@ figure {
 .menu.opened .menu__nav {
   width: 14em;
 }
-.menu.opened .overlay {
-  display: block;
-}
 .menu__toggle {
   width: 1.8em;
   font-size: 1em;
@@ -395,6 +387,20 @@ figure {
   top: 1em;
   z-index: 1000;
   background: #ffffff;
+}
+.menu__opened {
+  font-size: 1em;
+  display: none;
+  width: 1.5em;
+  height: 1.5em;
+  flex-shrink: 0;
+}
+.menu__opened svg {
+  width: 100%;
+  height: 100%;
+}
+.menu__opened svg path {
+  stroke: #ffffff;
 }
 .menu__nav {
   padding: 1em;
@@ -451,9 +457,6 @@ figure {
   display: inline-block;
   margin: 0.4em 0;
 }
-.overlay {
-  display: none;
-}
 @media (max-height: 499px) {
   .menu__top {
     margin-top: 1.428em;
@@ -467,36 +470,11 @@ figure {
 }
 @media (max-width: 767px) {
   .menu {
-    height: auto;
+    display: none;
     right: 0;
-    position: static;
-    min-height: auto;
   }
   .menu.opened {
-    width: auto;
-  }
-  .menu.opened .menu__nav {
     display: block;
-  }
-  .menu.opened .menu__toggle {
-    background: #ffffff;
-  }
-  .menu.opened .menu__toggle svg path {
-    stroke: #062a48;
-  }
-  .menu.opened .menu__nav {
-    background: #ffffff;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-  }
-  .menu.opened .overlay {
-    display: block;
-    height: 100vh;
-  }
-  .menu__nav {
-    display: none;
   }
   .menu__wrapper {
     min-height: auto;
@@ -504,14 +482,13 @@ figure {
   .menu__nav {
     margin-left: auto;
   }
-  .menu__toggle {
-    right: 0;
-    left: auto;
-    top: 0;
-    background: transparent;
+  .menu__opened {
+    display: block;
   }
-  .menu__toggle svg path {
-    stroke: white;
+}
+@media (max-width: 575px) {
+  .menu__opened {
+    margin-left: auto;
   }
 }
 .payment {
@@ -526,13 +503,14 @@ figure {
 }
 .payment__section--left {
   padding-left: 5.6em;
-  width: 77%;
+  width: 76%;
   margin-bottom: 1.5em;
+  margin-right: 1%;
 }
 .payment__section--left::before {
   content: '';
-  width: 36px;
-  height: 36px;
+  width: 2.2em;
+  height: 2.2em;
   display: block;
   position: absolute;
   left: 0;
@@ -596,10 +574,10 @@ figure {
 @media (max-width: 767px) {
   .payment__section--left {
     padding-left: 2.5em;
-    width: 78%;
+    width: 66%;
   }
   .payment__section--right {
-    width: 30%;
+    width: 32%;
   }
   .payment__date {
     margin-right: 1.5em;
@@ -613,16 +591,21 @@ figure {
   .payment__section--right {
     width: 100%;
   }
-  .payment__section--left::before {
-    width: 30px;
-    height: 30px;
-  }
 }
 .popup {
   display: none;
 }
 .popup.opened {
   display: block;
+}
+.popup__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #062a48;
+  opacity: 0.9;
 }
 .popup__content {
   position: absolute;
@@ -633,6 +616,7 @@ figure {
   flex-direction: column;
   padding: 0.6em 0.6em 1.9em;
   width: 10.6em;
+  z-index: 1000;
 }
 .popup__menu {
   margin-top: 1.8em;

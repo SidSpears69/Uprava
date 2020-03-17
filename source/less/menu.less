@@ -7,6 +7,7 @@
     box-shadow: -1px 0px 3px 0 rgba(47, 47, 47, 0.1);
     overflow: hidden;
     left: 0;
+    background-color: rgba(6, 42, 72, 0.9);
     & .menu__item span,
     & .menu__text {
         display: none;
@@ -23,9 +24,9 @@
         & .menu__nav {
             width: 14em;
         }
-        & .overlay {
-            display: block;
-        }
+        // & .overlay {
+        //     display: block;
+        // }
     }
 }
 .menu__toggle {
@@ -38,6 +39,20 @@
     top: 1em;
     z-index: 1000;
     background: #ffffff;
+}
+.menu__opened {
+    font-size: 1em;
+    display: none;
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+    & svg {
+        width: 100%;
+        height: 100%;
+    }
+    & svg path{
+        stroke: #ffffff;
+    }
 }
 .menu__nav {
     padding: 1em;
@@ -94,9 +109,6 @@
     display: inline-block;
     margin: 0.4em 0;
 }
-.overlay {
-    display: none;
-}
 @media (max-height: 499px) {
     .menu__top {
         margin-top: 1.428em;
@@ -110,52 +122,25 @@
 }
 @media @small-widths {
     .menu {
-        height: auto;
+        display: none;
         right: 0;
-        position: static;
-        min-height: auto;
         &.opened {
-            width: auto;
-            & .menu__nav {
-                display: block;
-            }
-            & .menu__toggle {
-                background: #ffffff;
-                & svg path{
-                    stroke: #062a48;
-                }
-            } 
-            & .menu__nav {
-                background: @white;
-                position: fixed;
-                top: 0;
-                right: 0;
-                height: 100vh;
-            }
-            & .overlay {
-                display: block;
-                height: 100vh;
-            }
+            display: block;
         }
 
     }
-    .menu__nav {
-        display: none;
-    }
-
     .menu__wrapper {
         min-height: auto;
     }
     .menu__nav {
         margin-left: auto;
     }
-    .menu__toggle {
-        right: 0;
-        left: auto;
-        top: 0;
-        background: transparent;
-        & svg path{
-            stroke: white;
-        } 
+    .menu__opened {
+        display: block;
+    } 
+}
+@media @extra-small-widths {
+    .menu__opened {
+        margin-left: auto;
     } 
 }

@@ -1,0 +1,86 @@
+.form {
+    width: 50%;
+}
+
+.form__item {
+    display: flex;
+    margin-bottom: 0.9em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__label,
+.form__input {
+    width: 48%;
+}
+
+.form__input {
+    border-radius: 3px;
+    border: solid 1px #666666;
+    padding: 0.5em;
+    padding-right: 2.3em;
+    position: relative;
+
+    & input {
+        width: 100%;
+        border: none;
+        font-family: "FuturaPT";
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: 0.45px;
+        color: @black;
+    }
+
+    &--number input {
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        right: 0.3em;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+        background: url("../img/icons/edit.svg") no-repeat;
+        background-size: cover;
+    }
+}
+
+@media @large-widths {
+    .form {
+        width: 60%;
+    }
+}
+
+@media @medium-widths {
+    .form {
+        width: 75%;
+    }
+}
+
+@media @small-widths {
+    .form {
+        width: 100%;
+    }
+}
+
+@media @extra-small-widths {
+    .form__item {
+        flex-wrap: wrap;
+    }
+
+    .form__label,
+    .form__input {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+}

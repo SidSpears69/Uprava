@@ -25,9 +25,9 @@
                 <div class="page-header__content">
                     <p class="page-header__info">Доступно к снятию: <span class="sum">20 000 ₽</span></p>
                     <nav class="page-header__menu">
-                        <a href="#" class="page-header__link"><img src="img/icons/share.svg" alt="Поделиться"></a>
-                        <a href="#" class="page-header__link"><img src="img/icons/cabinet.svg" alt="Кабинет"></a>
-                        <a href="#" class="page-header__link"><img src="img/icons/logout.svg" alt="Выйти"></a>
+                        <a href="#" class="page-header__link" title="Поделиться"><img src="img/icons/share.svg" alt="Поделиться"></a>
+                        <a href="cabinet.html" class="page-header__link" title="Кабинет"><img src="img/icons/cabinet.svg" alt="Кабинет"></a>
+                        <a href="#" class="page-header__link" title="Выйти"><img src="img/icons/logout.svg" alt="Выйти"></a>
                     </nav>
                 </div>
                 <button class="button menu__opened"><svg fill="#062a48" width="28" height="28" version="1.0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#062a48" stroke-miterlimit="10" stroke-width="2" d="M2 12h20M2 6h20M2 18h20"/></svg></button>
@@ -37,14 +37,14 @@
                         <div class="menu__wrapper">
                             <div class="menu__content">
                                 <ul class="menu__top">
-                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/extract.svg" alt="Выписка"><span>Выписка</span></a>
+                                    <li class="menu__item"><a href="#" title="Выписка"><img class="menu__img" src="img/icons/extract.svg" alt="Выписка"><span>Выписка</span></a>
                                     </li>
-                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/newpayment.svg" alt="Новый платеж"><span>Новый
+                                    <li class="menu__item"><a href="#" title="Новый платеж"><img class="menu__img" src="img/icons/newpayment.svg" alt="Новый платеж"><span>Новый
                                         платеж</span></a></li>
-                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/cabinet-blue.svg" alt="Личный кабинет"><span>Личный
+                                    <li class="menu__item"><a href="#" title="Личный кабинет"><img class="menu__img" src="img/icons/cabinet-blue.svg" alt="Личный кабинет"><span>Личный
                                         кабинет</span></a></li>
-                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/tariffs.svg" alt="Тарифы"><span>Тарифы</span></a></li>
-                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/api.svg" alt="API"><span>API</span></a></li>
+                                    <li class="menu__item"><a href="#" title="Тарифы"><img class="menu__img" src="img/icons/tariffs.svg" alt="Тарифы"><span>Тарифы</span></a></li>
+                                    <li class="menu__item"><a href="#" title="API"><img class="menu__img" src="img/icons/api.svg" alt="API"><span>API</span></a></li>
                                 </ul>
                                 <p class="menu__text">Телефон горячей линии: 
                                     <a class="menu__link" href="tel:88008000000">8 (800) 800-00-00</a>
@@ -53,16 +53,16 @@
                                 <p class="menu__text menu__text--address">Адрес головного офиса Эскроу Банка в России:</p>
                                 <p class="menu__text">г.Москва, ул. Звенигородская 25</p>
                                 <ul class="menu__bottom">
-                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/questions.svg"
+                                    <li class="menu__item"><a href="#" title="Вопрос-ответ"><img class="menu__img" src="img/icons/questions.svg"
                                                 alt="Вопрос-ответ"><span>Вопрос-ответ</span></a></li>
-                                    <li class="menu__item"><a href="#"><img class="menu__img" src="img/icons/logout-menu.svg" alt="Выйти"><span>Выйти</span></a></li>
+                                    <li class="menu__item"><a href="#" title="Выйти"><img class="menu__img" src="img/icons/logout-menu.svg" alt="Выйти"><span>Выйти</span></a></li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
                 </aside>
             </div>
-            <div class="page-header__container page-header__container--menu">
+            <div class="page-header__container page-header__container--menu page-header__container--payment">
                     <nav class="menu-payment">
                         <a class="menu-payment__item menu-payment__item--active" href="#">Все платежи</a>
                         <a class="menu-payment__item" href="#">Входящие</a>
@@ -80,8 +80,8 @@
                 </div>
         </div>
     </header>
-    <main class="page-main">
-        <div class="wrapper wrapper--payment">
+    <main class="page-main page-main--payment">
+        <div class="wrapper wrapper--main wrapper--payment">
             <ul class="payment">
                 <li class="payment__item payment__item--incoming payment__item--blocked">
                     <div class="payment__section payment__section--left">

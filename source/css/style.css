@@ -54,23 +54,22 @@ figure {
   width: 90%;
   margin: 0 auto;
 }
-.wrapper--payment {
+.wrapper--main {
+  box-shadow: -1px 0px 3px 0 rgba(47, 47, 47, 0.1);
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   position: relative;
+  padding: 1.8em 1.4em;
+}
+.wrapper--payment {
+  padding: 0;
 }
 .sum {
   font-size: 1.4em;
   letter-spacing: 0.04em;
   display: block;
   line-height: 1;
-}
-.page-main {
-  padding-left: 4.2em;
-  flex-grow: 1;
-  display: flex;
-  margin-top: 12.4em;
-  margin-bottom: 1.4em;
 }
 .copyright {
   padding-left: 5.25em;
@@ -118,17 +117,11 @@ figure {
     margin-top: 15.95em;
     padding-left: 0;
   }
-  .copyright {
-    padding-left: 0;
-  }
 }
 @media (max-width: 575px) {
   .page-main {
     margin-top: 21.483em;
     margin-bottom: 1.145em;
-  }
-  .copyright {
-    font-size: 0.6em;
   }
 }
 .button {
@@ -204,6 +197,14 @@ figure {
 .page-header__link:last-child {
   margin-right: 0;
 }
+.page-header__title {
+  font-family: "FuturaPT-Demi";
+  font-size: 1em;
+  color: #062a48;
+  margin: 0;
+  font-weight: normal;
+  margin: 0.5em 0;
+}
 @media (max-width: 991px) {
   .page-header__container--menu {
     padding: 1.8em 1.4em;
@@ -222,7 +223,7 @@ figure {
     flex-wrap: wrap;
     padding-right: 0;
   }
-  .page-header__container--menu {
+  .page-header__container--payment {
     min-height: 10.6em;
   }
   .page-header__content {
@@ -492,9 +493,38 @@ figure {
     margin-left: auto;
   }
 }
+.page-main {
+  padding-left: 4.2em;
+  flex-grow: 1;
+  display: flex;
+  margin-top: 12.4em;
+  margin-bottom: 1.4em;
+}
+.page-main__title {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 0.9em;
+}
+@media (max-width: 767px) {
+  .page-main {
+    padding-left: 0;
+    margin-top: 13.267em;
+  }
+  .page-main--payment {
+    margin-top: 15.95em;
+  }
+}
+@media (max-width: 575px) {
+  .page-main {
+    margin-top: 16.769em;
+    margin-bottom: 1.145em;
+  }
+  --payment {
+    margin-top: 21.483em;
+  }
+}
 .payment {
-  box-shadow: -1px 0px 3px 0 rgba(47, 47, 47, 0.1);
-  background: #ffffff;
   flex-grow: 1;
 }
 .payment__section {
@@ -616,4 +646,78 @@ figure {
 .popup__menu {
   margin-top: 1.8em;
   width: 100%;
+}
+.form {
+  width: 50%;
+}
+.form__item {
+  display: flex;
+  margin-bottom: 0.9em;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__label,
+.form__input {
+  width: 48%;
+}
+.form__input {
+  border-radius: 3px;
+  border: solid 1px #666666;
+  padding: 0.5em;
+  padding-right: 2.3em;
+  position: relative;
+}
+.form__input input {
+  width: 100%;
+  border: none;
+  font-family: "FuturaPT";
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  color: #363636;
+}
+.form__input--number input {
+  -moz-appearance: textfield;
+}
+.form__input--number input::-webkit-outer-spin-button,
+.form__input--number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.form__input::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  right: 0.3em;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+  background: url("../img/icons/edit.svg") no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1199px) {
+  .form {
+    width: 60%;
+  }
+}
+@media (max-width: 991px) {
+  .form {
+    width: 75%;
+  }
+}
+@media (max-width: 767px) {
+  .form {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .form__item {
+    flex-wrap: wrap;
+  }
+  .form__label,
+  .form__input {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
 }

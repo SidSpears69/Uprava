@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <header class="page-header">
+        <div class="wrapper">
+            <div class="page-header__container page-header__container--top">
+                <a class="page-header__logo" href="index.html">
+                    <figure class="logo">
+                        <img src="img/logo.png" alt="logo" class="logo__img/icons">
+                        <figcaption class="logo__name">
+                            Эскроу-Управа
+                            <span class="logo__small-text">Cистема безопасных платежей</span>
+                        </figcaption>
+                    </figure>
+                </a>
+                <div class="page-header__content">
+                    <p class="page-header__info">Доступно к снятию: <span class="sum">20 000 ₽</span></p>
+                    <nav class="page-header__menu">
+                        <a href="#" class="page-header__link" title="Поделиться"><img src="img/icons/share.svg"
+                                alt="Поделиться"></a>
+                        <a href="#" class="page-header__link" title="Кабинет"><img src="img/icons/cabinet.svg"
+                                alt="Кабинет"></a>
+                        <a href="#" class="page-header__link" title="Выйти"><img src="img/icons/logout.svg"
+                                alt="Выйти"></a>
+                    </nav>
+                </div>
+                <button class="button menu__opened"><svg fill="#062a48" width="28" height="28" version="1.0"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" stroke="#062a48" stroke-miterlimit="10" stroke-width="2"
+                            d="M2 12h20M2 6h20M2 18h20" /></svg></button>
+                <aside class="menu">
+                    <nav class="menu__nav">
+                        <button class="button menu__toggle"><svg fill="#062a48" width="28" height="28" version="1.0"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" stroke="#062a48" stroke-miterlimit="10" stroke-width="2"
+                                    d="M2 12h20M2 6h20M2 18h20" /></svg></button>
+                        <div class="menu__wrapper">
+                            <div class="menu__content">
+                                <ul class="menu__top">
+                                    <li class="menu__item"><a href="#" title="Выписка"><img class="menu__img"
+                                                src="img/icons/extract.svg" alt="Выписка"><span>Выписка</span></a>
+                                    </li>
+                                    <li class="menu__item"><a href="#" title="Новый платеж"><img class="menu__img"
+                                                src="img/icons/newpayment.svg" alt="Новый платеж"><span>Новый
+                                                платеж</span></a></li>
+                                    <li class="menu__item"><a href="#" title="Личный кабинет"><img class="menu__img"
+                                                src="img/icons/cabinet-blue.svg" alt="Личный кабинет"><span>Личный
+                                                кабинет</span></a></li>
+                                    <li class="menu__item"><a href="#" title="Тарифы"><img class="menu__img"
+                                                src="img/icons/tariffs.svg" alt="Тарифы"><span>Тарифы</span></a></li>
+                                    <li class="menu__item"><a href="#" title="API"><img class="menu__img"
+                                                src="img/icons/api.svg" alt="API"><span>API</span></a></li>
+                                </ul>
+                                <p class="menu__text">Телефон горячей линии:
+                                    <a class="menu__link" href="tel:88008000000">8 (800) 800-00-00</a>
+                                    <a class="menu__link menu__link--underline" href="#">Чат поддержки клиентов</a>
+                                </p>
+                                <p class="menu__text menu__text--address">Адрес головного офиса Эскроу Банка в России:
+                                </p>
+                                <p class="menu__text">г.Москва, ул. Звенигородская 25</p>
+                                <ul class="menu__bottom">
+                                    <li class="menu__item"><a href="#" title="Вопрос-ответ"><img class="menu__img"
+                                                src="img/icons/questions.svg"
+                                                alt="Вопрос-ответ"><span>Вопрос-ответ</span></a></li>
+                                    <li class="menu__item"><a href="#" title="Выйти"><img class="menu__img"
+                                                src="img/icons/logout-menu.svg" alt="Выйти"><span>Выйти</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </aside>
+            </div>
+            <div class="page-header__container page-header__container--menu">
+                <h1 class="page-header__title">Личный кабинет</h1>
+                <a href="" class="menu-payment__new-payment">Создать новый платёж<img src="img/icons/add.svg"
+                        alt=""></a>
+            </div>
+        </div>
+    </header>
+    <main class="page-main">
+        <div class="wrapper wrapper--main">
+            <h2 class="page-main__title">Личные данные</h2>
+            <form action="" class="form">
+                <div class="form__item">
+                    <label for="country" class="form__label">Страна</label>
+                    <div class="form__input">
+                        <input type="text" name="country" id="country" placeholder="Укажите страну" value="Россия">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="identifier" class="form__label">ID (ваш номер в системе ЭскроуБанк)</label>
+                    <div class="form__input form__input--number">
+                        <input type="number" name="identifier" id="identifier" placeholder="Укажите ID"
+                            value="1234567890">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="inn" class="form__label">ИНН компании</label>
+                    <div class="form__input form__input--number">
+                        <input type="number" name="inn" id="inn" placeholder="Укажите ИНН" value="614706666666">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="title" class="form__label">Полное наименование компании</label>
+                    <div class="form__input">
+                        <input type="text" name="title" id="title" placeholder="Укажите название компании"
+                            value="ООО РОМАШКА">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="fio" class="form__label">ФИО (лица действующего без доверенности)</label>
+                    <div class="form__input">
+                        <input type="text" name="fio" id="fio" placeholder="Укажите ФИО" value="Иванов Иван Иванович">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="reg-address" class="form__label">Юридический адрес</label>
+                    <div class="form__input">
+                        <input type="text" name="reg-address" id="reg-address" placeholder="Укажите юридический адрес"
+                            value="Ростов-на-Дону, пр-т Космо">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="phys-address" class="form__label">Фактический адрес</label>
+                    <div class="form__input">
+                        <input type="text" name="phys-address" id="phys-address" placeholder="Укажите фактический адрес"
+                            value="Ростов-на-Дону, пр-т Космо">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="ogrn" class="form__label">ОГРН</label>
+                    <div class="form__input form__input--number">
+                        <input type="number" name="ogrn" id="ogrn" placeholder="Укажите ОГРН" value="614706666666">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="phone" class="form__label">Телефон</label>
+                    <div class="form__input form__input--number">
+                        <input type="tel" name="phone" id="phone" placeholder="Укажите телефон"
+                            value="8 (800) 800-00-00">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="other-phone" class="form__label">Доп. телефон</label>
+                    <div class="form__input form__input--number">
+                        <input type="tel" name="other-phone" id="other-phone" placeholder="Укажите телефон"
+                            value="8 (800) 800-00-00">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="mail" class="form__label">Email</label>
+                    <div class="form__input">
+                        <input type="email" name="mail" id="mail" placeholder="Укажите почту" value="ivanov@ivan.ru">
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="site" class="form__label">Сайт</label>
+                    <div class="form__input form__input--number">
+                        <input type="text" name="site" id="site" placeholder="Укажите сайт" value="www.site.ru">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="copyright">
+        <div class="wrapper">© ЭСКРОУ-УПРАВА. Система безопасных платежей. Все права
+            защищены.</div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

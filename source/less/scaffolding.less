@@ -71,11 +71,16 @@ figure {
 .wrapper {
     width: 90%;
     margin: 0 auto;
-
-    &--payment {
+    &--main {
+        box-shadow: -1px 0px 3px 0 rgba(47, 47, 47, 0.1);
+        background: @white;
         display: flex;
         flex-direction: column;
         position: relative;
+        padding: 1.8em 1.4em;
+    }
+    &--payment {
+        padding: 0;
     }
 }
 
@@ -84,14 +89,6 @@ figure {
     letter-spacing: 0.04em;
     display: block;
     line-height: 1;
-}
-
-.page-main {
-    padding-left: 4.2em;
-    flex-grow: 1;
-    display: flex;
-    margin-top: 12.4em;
-    margin-bottom: 1.4em;
 }
 
 .copyright {
@@ -144,16 +141,10 @@ figure {
         margin-top: 15.95em;
         padding-left: 0;
     }
-    .copyright {
-        padding-left: 0;
-    }
 }
 @media @extra-small-widths {
     .page-main {
         margin-top: 21.483em;
         margin-bottom: 1.145em;
-    }
-    .copyright {
-        font-size: 0.6em;
     }
 }

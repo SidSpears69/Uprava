@@ -602,21 +602,16 @@ figure {
   left: 0;
   z-index: 1000;
   background-color: rgba(6, 42, 72, 0.9);
+  justify-content: center;
 }
 .popup.opened {
-  display: block;
+  display: flex;
 }
 .popup__content {
-  position: absolute;
   background-color: #ffffff;
-  display: table;
   padding: 0.6em 0.6em 1.9em;
   width: 10.6em;
-  top: 50%;
-  bottom: 50%;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%);
+  align-self: center;
 }
 .popup__menu {
   margin-top: 1.8em;

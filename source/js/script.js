@@ -18,6 +18,9 @@ $(document).ready(function () {
             if (difference > 0) {
                 top = top - difference;
             }
+            if(left < 0) {
+                left = window.innerWidth/2 - width/2;
+            }
             $(".popup__content").offset({ top: top, left: left });
         })
     })
